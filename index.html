@@ -13,6 +13,7 @@
     <meta property="og:title" content="Ellen Chandler - Brand Strategist">
     <meta property="og:description" content="10 years of experience shaping communication and experience strategy across the funnel">
     <meta property="og:image" content="path/to/share-image.jpg">
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.7.1/dist/dotlottie-wc.js" type="module"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -107,33 +108,62 @@
                 <h2>Strategy Skills</h2>
             </div>
             <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">🎯</div>
+                <dotlottie-wc 
+                  id="icon-brand-strategy"
+                  src="https://lottie.host/a303e31b-b3a9-4687-80fa-ef4671670d27/LSg7ameR0h.json" 
+                  speed="0.5" 
+                  style="width: 80px; height: 80px" 
+                  mode="forward" 
+                  loop>
+                </dotlottie-wc>
                     <h3>Brand Strategy</h3>
                     <p>Building positioning, architecture, and brand platforms that give brands clarity and creative teams a north star.</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">💡</div>
+                   <dotlottie-wc 
+                      id="icon-creative-strategy"
+                      src="https://lottie.host/77495aa8-0229-4608-8043-7a5311e8944e/6mSSDzqaNF.json" 
+                      speed="1" 
+                      style="width: 80px; height: 80px" 
+                      mode="forward" 
+                      loop>
+                    </dotlottie-wc>
                     <h3>Creative Strategy</h3>
                     <p>I uncover human truths that fuel breakthrough creative ideas. This includes crafting creative briefs, comms frameworks, and cultural strategies. </p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">✍️</div>
+                    <dotlottie-wc 
+                      id="icon-experience-strategy"
+                      src="https://lottie.host/80e158f3-1367-4538-9f50-921c004e0799/bEMfdzuOSf.lottie" 
+                      speed="2" 
+                      style="width: 80px; height: 80px" 
+                      mode="forward" 
+                      loop>
+                    </dotlottie-wc>
                     <h3>Experience Strategy</h3>
                     <p>I've worked across the full lifecycle from awareness to retention, using behavioral science and an understanding of UX to design journeys and touchpoints that feel personal and timely.</p>
                 </div>
-                  <div class="skill-card">
-                    <div class="skill-icon">🎨</div>
-                    <h3>Workshop Facilitation</h3>
-                    <p>Leading design thinking sprints, strategic group therapy, and cross-functional workshops that get teams aligned on breakthrough thinking, fast.</p>
-                </div>
                 <div class="skill-card">
-                    <div class="skill-icon">📊</div>
+                    <dotlottie-wc 
+                      id="icon-research"
+                      src="https://lottie.host/f348ce93-083c-477f-95d3-d9cd40ecf6e4/nNka32qrPc.lottie" 
+                      speed="0.5" 
+                      style="width: 80px; height: 80px" 
+                      mode="forward" 
+                      loop>
+                    </dotlottie-wc>
                     <h3>Research Design</h3>
                     <p>Running qualitative and quantitative research that goes beyond the obvious. Survey design, focus group moderation, data synthesis, and turning messy inputs into clear implications.</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">🔍</div>
+                    <dotlottie-wc 
+                      id="icon-data-analysis"
+                      src="https://lottie.host/6d9b2956-eabf-452c-89e9-0807f98a8c00/DLopLN2ZL8.lottie" 
+                      speed="1" 
+                      style="width: 80px; height: 80px" 
+                      mode="forward" 
+                      loop>
+                    </dotlottie-wc>
                     <h3>Analysis & Optimization</h3>
                     <p>I have an Advanced Certificate in Effectiveness from the Institute of Practitioners in Advertising. I'll find the story behind the numbers of your test results or campaign performance.</p>
                 </div>
@@ -269,5 +299,34 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- Before closing </body> tag, add this script: -->
+<script>
+// Get all skill icons
+const skillIcons = [
+  'icon-brand-strategy',
+  'icon-creative-strategy',
+  'icon-experience-strategy',
+  'icon-research',
+  'icon-data-analysis',
+  'icon-workshop'
+];
+
+// Add hover play/stop to each
+skillIcons.forEach(iconId => {
+  const animation = document.getElementById(iconId);
+  
+  if (animation) {
+    animation.addEventListener('mouseenter', () => {
+      animation.play();
+    });
+    
+    animation.addEventListener('mouseleave', () => {
+      animation.stop();
+    });
+  }
+});
+</script>
+    
 </body>
 </html>
