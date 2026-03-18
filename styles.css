@@ -2,16 +2,16 @@
    CSS Variables - Warm & Whimsical Theme
    ========================================== */
 :root {
- /* Colors - Olive & Clay */
---color-primary: #818456;        /* Warm olive green */
---color-primary-dark: #656B3F;   /* Deep olive */
---color-secondary: #D9A566;      /* Warm mustard */
---color-accent: #B87A5C;         /* Clay/brick */
---color-background: #F9F7F3;     /* Natural cream */
+/* Colors - Forest & Gold */
+--color-primary: #3D5A3C;        /* Deep forest green */
+--color-primary-dark: #2A4029;   /* Darker forest */
+--color-secondary: #D4A251;      /* Warm gold */
+--color-accent: #8B6F47;         /* Bronze */
+--color-background: #FAF8F5;     /* Off-white */
 --color-surface: #FFFFFF;        /* White */
 --color-text: #2D3142;           /* Dark blue-gray */
 --color-text-light: #5A5D6F;     /* Medium gray */
---color-border: #E6DFD4;         /* Sandy beige */
+--color-border: #E3DDD4;         /* Soft beige */
     
     /* Typography */
     --font-display: 'DM Serif Display', serif;
