@@ -580,12 +580,13 @@ section {
 .project-card {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-md);
+    gap: 0; /* No gap - they sit flush */
     background: var(--color-surface);
     border-radius: var(--border-radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-sm);
     transition: all 0.3s ease;
+    min-height: 400px; /* Ensures minimum card height */
 }
 
 .project-card:hover {
@@ -644,6 +645,21 @@ section {
     color: var(--color-text);
     border-radius: var(--border-radius-full);
     font-weight: 500;
+}
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image img,
+.project-image .placeholder-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Fill the entire image column */
+    object-fit: cover; /* Crop to fill without distortion */
 }
 
 /* ==========================================
