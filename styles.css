@@ -554,24 +554,9 @@ section {
     box-shadow: var(--shadow-md);
 }
 
-.skill-card:hover .skill-icon {
-    transform: scale(1.1);
-}
-
 .skill-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto var(--spacing-sm);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease;
-}
-
-dotlottie-wc {
-    width: 100% !important;
-    height: 100% !important;
-    transform: scale(1.2); /* Zoom all of them in by 20% */
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
 }
 
 .skill-card h3 {
@@ -582,6 +567,14 @@ dotlottie-wc {
 .skill-card p {
     color: var(--color-text-light);
     margin-bottom: 0;
+}
+
+#icon-data-analysis {
+    transform: scale(1.3);
+}
+
+#icon-workshop {
+    transform: scale(1.3);
 }
 
 /* ==========================================
