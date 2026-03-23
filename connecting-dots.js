@@ -8,13 +8,13 @@ class ConnectingDots {
         
         // Configuration
         this.config = {
-            dotCount: options.dotCount || 60,
-            dotColor: options.dotColor || '#3D5A3C', // Sage green from your palette
+            dotCount: options.dotCount || 90,
+            dotColor: options.dotColor || '#3D5A3C',
             lineColor: options.lineColor || '#3D5A3C',
-            dotRadius: options.dotRadius || 2.5,
-            maxDistance: options.maxDistance || 150,
-            speed: options.speed || 0.5,
-            lineWidth: options.lineWidth || 1.5,
+            dotRadius: options.dotRadius || 5.5,
+            maxDistance: options.maxDistance || 250,
+            speed: options.speed || 0.7,
+            lineWidth: options.lineWidth || 2.5,
             ...options
         };
         
