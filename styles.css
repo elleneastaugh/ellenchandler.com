@@ -964,3 +964,29 @@ section {
         text-align: center;
     }
 }
+
+/* Animated Background - Connecting Dots */
+.hero-animated-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    opacity: 0.4;
+}
+
+.hero-animated-bg canvas {
+    display: block;
+}
+
+/* Make sure hero content stays on top */
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.scroll-indicator {
+    z-index: 2;
+}
