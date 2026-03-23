@@ -585,101 +585,213 @@ section {
     gap: var(--spacing-lg);
 }
 
-.project-card {
-    display: grid;
-    grid-template-columns: 45% 55%; /* Image slightly smaller */
-    gap: var(--spacing-lg);
+.project-card-clean {
     background: var(--color-surface);
-    border-radius: var(--border-radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow-sm);
+    border-radius: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
     transition: all 0.3s ease;
-    margin-bottom: var(--spacing-xl);
-    padding: var(--spacing-lg); /* Add internal padding */
 }
-
-.project-card:nth-child(even) {
-    grid-template-columns: 55% 45%;
+ 
+.project-card-clean:hover {
+    border-color: rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
-
-.project-card:nth-child(even) .project-image {
-    order: 2;
+ 
+/* Header Section (Media + Info side by side) */
+.project-header-section {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
-
-.project-image {
-    position: relative;
+ 
+/* Media (9:16 aspect ratio - portrait) */
+.project-media {
+    width: 380px;
+    aspect-ratio: 9 / 16;
+    border-radius: 16px;
     overflow: hidden;
-    border-radius: var(--border-radius-md); /* Rounded corners on image */
-    height: 100%; /* Fill the card height */
-    min-height: 350px;
+    background: #f5f5f5;
+    position: relative;
 }
-
-.project-image iframe,
-.project-image img {
+ 
+.project-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+ 
+.project-media iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    border: 0;
 }
-
-.project-content {
+ 
+/* Header Info */
+.project-header-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0; /* No extra padding since card has it */
 }
-
-/* Stack on mobile */
-@media (max-width: 968px) {
-    .project-card {
-        grid-template-columns: 1fr;
-        padding: 0;
-    }
-    
-    .project-image {
-        order: -1;
-        min-height: 250px;
-        border-radius: 0;
-    }
-    
-    .project-content {
-        padding: var(--spacing-lg);
-    }
-}
-
-.project-meta {
+ 
+.project-meta-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: var(--spacing-sm);
-    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
 }
-
+ 
 .project-client {
+    font-size: 0.875rem;
     font-weight: 600;
-    color: var(--color-primary);
+    color: var(--color-text);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
-
+ 
 .project-year {
-    color: var(--color-text-light);
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
 }
-
-.project-tags {
+ 
+.project-headline {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0 0 0.75rem 0;
+    color: var(--color-text);
+}
+ 
+.project-subhead {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+    margin: 0 0 1.25rem 0;
+}
+ 
+.project-tags-inline {
     display: flex;
-    gap: var(--spacing-xs);
-    margin-top: var(--spacing-sm);
+    gap: 0.5rem;
     flex-wrap: wrap;
 }
-
+ 
 .tag {
-    font-size: 0.75rem;
-    padding: 0.25rem 0.75rem;
+    display: inline-block;
+    padding: 0.375rem 0.875rem;
     background: var(--color-background);
-    color: var(--color-text);
-    border-radius: var(--border-radius-full);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
     font-weight: 500;
+}
+ 
+/* Body Text */
+.project-body-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+ 
+.project-section h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 0 0 0.5rem 0;
+}
+ 
+.project-section p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text);
+    margin: 0 0 0.75rem 0;
+}
+ 
+.project-section p:last-child {
+    margin-bottom: 0;
+}
+ 
+.project-section p em {
+    font-style: italic;
+    color: var(--color-primary);
+    font-weight: 500;
+}
+ 
+.project-section p strong {
+    font-weight: 600;
+}
+ 
+/* Mobile Responsive */
+@media (max-width: 968px) {
+    .project-card-clean {
+        padding: 2rem;
+    }
+    
+    .project-header-section {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .project-media {
+        width: 100%;
+        max-width: 380px;
+        margin: 0 auto;
+    }
+    
+    .project-headline {
+        font-size: 1.75rem;
+    }
+    
+    .project-subhead {
+        font-size: 1rem;
+    }
+}
+ 
+@media (max-width: 640px) {
+    .project-card-clean {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+    
+    .project-header-section {
+        gap: 1.25rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    
+    .project-meta-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+    
+    .project-headline {
+        font-size: 1.5rem;
+    }
+    
+    .project-subhead {
+        font-size: 0.9375rem;
+    }
+    
+    .project-body-text {
+        gap: 1.25rem;
+    }
+    
+    .project-section h4 {
+        font-size: 0.9375rem;
+    }
+    
+    .project-section p {
+        font-size: 0.9375rem;
+    }
 }
 
 /* ==========================================
