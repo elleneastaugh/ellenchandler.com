@@ -554,9 +554,24 @@ section {
     box-shadow: var(--shadow-md);
 }
 
+.skill-card:hover .skill-icon {
+    transform: scale(1.1);
+}
+
 .skill-icon {
-    font-size: 2.5rem;
-    margin-bottom: var(--spacing-sm);
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+dotlottie-wc {
+    width: 100% !important;
+    height: 100% !important;
+    transform: scale(1.2); /* Zoom all of them in by 20% */
 }
 
 .skill-card h3 {
