@@ -607,6 +607,11 @@ section {
     background: linear-gradient(135deg, var(--color-accent), var(--color-secondary));
 }
 
+.project-image {
+    position: relative;
+    overflow: hidden;
+}
+
 .project-image iframe {
     position: absolute;
     top: 0;
