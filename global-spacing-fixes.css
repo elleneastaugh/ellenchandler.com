@@ -1,0 +1,174 @@
+/* COMPREHENSIVE SPACING FIXES FOR ENTIRE SITE */
+/* Add these to your styles.css to tighten spacing everywhere */
+
+/* ============================================
+   GLOBAL PARAGRAPH SPACING
+   ============================================ */
+
+/* Tighter default paragraph spacing */
+p {
+    margin-bottom: 0.75rem; /* Reduced from default 1rem */
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+/* Headings to paragraph spacing */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.75rem; /* Tighter than default */
+}
+
+h1 + p, h2 + p, h3 + p, h4 + p {
+    margin-top: 0.5rem; /* Reduce gap after headings */
+}
+
+/* ============================================
+   ABOUT SECTION SPACING
+   ============================================ */
+
+.about-content p {
+    margin-bottom: 0.75rem; /* Tighter paragraph spacing */
+    line-height: 1.7;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+.about-stats {
+    gap: 1.5rem; /* Tighter gap between stat cards */
+}
+
+.stat-card {
+    padding: 1.25rem; /* Slightly less padding inside cards */
+}
+
+.stat-card .stat-number {
+    margin-bottom: 0.25rem; /* Tighter number-to-label spacing */
+}
+
+/* If you have multiple paragraphs in about section */
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* Tighter gap between paragraphs */
+}
+
+/* ============================================
+   CONTACT SECTION SPACING
+   ============================================ */
+
+.contact-content {
+    gap: 2rem; /* Reduce gap between form and info */
+}
+
+.contact-info p {
+    margin-bottom: 0.75rem;
+}
+
+.contact-info a {
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+/* Form field spacing */
+.form-group {
+    margin-bottom: 1rem; /* Tighter form field spacing */
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    margin-bottom: 0; /* Remove extra margin */
+}
+
+/* ============================================
+   SKILLS SECTION SPACING
+   ============================================ */
+
+.skill-card p {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+.skill-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.skills-grid {
+    gap: 1.5rem; /* Tighter grid gap */
+}
+
+/* ============================================
+   HERO SECTION SPACING
+   ============================================ */
+
+.hero-subtitle {
+    margin-bottom: 1.5rem; /* Tighter spacing before CTA */
+}
+
+.hero-cta {
+    gap: 0.75rem; /* Tighter gap between buttons */
+}
+
+/* ============================================
+   SECTION SPACING
+   ============================================ */
+
+section {
+    padding: 4rem 0; /* Reduce section padding if it feels too spaced */
+}
+
+.section-header {
+    margin-bottom: 2.5rem; /* Tighter section header spacing */
+}
+
+.section-tag {
+    margin-bottom: 0.5rem;
+}
+
+.section-header h2 {
+    margin-bottom: 0.75rem;
+}
+
+/* ============================================
+   FOOTER SPACING
+   ============================================ */
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer .footer-links {
+    gap: 1rem;
+}
+
+/* ============================================
+   MOBILE ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 768px) {
+    section {
+        padding: 3rem 0; /* Even tighter on mobile */
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    p {
+        margin-bottom: 0.65rem;
+    }
+    
+    .about-stats {
+        gap: 1rem;
+    }
+    
+    .skills-grid {
+        gap: 1.25rem;
+    }
+}
