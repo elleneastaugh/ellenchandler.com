@@ -586,53 +586,40 @@ section {
 }
 
 .project-card {
-    display: grid;
-    grid-template-columns: 7fr 13fr;
-    gap: 0;
+    display: flex;
+    flex-direction: column;
     background: var(--color-surface);
     border-radius: var(--border-radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-sm);
     transition: all 0.3s ease;
-    /* No min-height - let text control it */
+    margin-bottom: var(--spacing-lg);
 }
 
 .project-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
     position: relative;
     overflow: hidden;
-    aspect-ratio: 16 / 9; /* Forces 16:9 ratio */
 }
 
 .project-image iframe,
-.project-image img,
-.project-image .placeholder-image {
+.project-image img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* For images */
-    border: 0;
+    object-fit: cover;
 }
 
 .project-content {
-    padding: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: var(--spacing-lg);
 }
 
 .project-card:hover {
     box-shadow: var(--shadow-lg);
     transform: translateY(-4px);
-}
-
-.project-card:nth-child(even) {
-    grid-template-columns: 13fr 7fr;
-}
-
-.project-card:nth-child(even) .project-image {
-    order: 2;
 }
 
 .project-meta {
